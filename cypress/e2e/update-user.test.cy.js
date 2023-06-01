@@ -1,6 +1,6 @@
 /// <reference types="cypress"/>
 
-describe('Update user', () => {
+describe('Update user', {testIsolation:false},() => {
     it('Successfully update user', () => {
         var user = {
             "name": 'Fathur Rohim',
@@ -13,3 +13,4 @@ describe('Update user', () => {
         })
     })
 })
+
