@@ -30,7 +30,7 @@ describe('Validate Header', { testIsolation: false }, () => {
     })
 
     it('Validates Content Pokemon', () => {
-        cy.request('https://pokeapi.co/api/v2/pokemon/ditto') // Ganti URL dengan URL yang sesuai
+        cy.request('https://pokeapi.co/api/v2/pokemon/ditto')
             .its('body').then((response) => {
                 expect(response.abilities[0].ability.name).to.eq('limber');
                 expect(response.abilities[0].ability.url).to.eq('https://pokeapi.co/api/v2/ability/7/');
